@@ -68,7 +68,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Documentation (v1.0.0)',
+            label: 'Documentation (v1)',
           },
           {
             href: 'https://github.com/sahil-phondekar/react-component-library',
