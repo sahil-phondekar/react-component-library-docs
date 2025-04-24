@@ -1,8 +1,0 @@
-{
-  "label": "Data Display",
-  "position": 5,
-  "link": {
-    "type": "generated-index",
-    "description": " A collection of components for effectively presenting and organizing data, including tables, lists, and other visual data formats."
-  }
-}

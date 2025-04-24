@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_component_library_docs=self.webpackChunkreact_component_library_docs||[]).push([[2634],{9179:(t,e,r)=>{r.r(e),r.d(e,{default:()=>o});var n=r(797),c=r(1410),s=r(6347),i=r(4848);function o(){const{siteConfig:t}=(0,n.A)();return(0,i.jsx)(c.A,{title:t.title,description:t.tagline,children:(0,i.jsx)(s.rd,{to:`${t.baseUrl}docs/intro`})})}}}]);
