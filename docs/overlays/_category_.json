@@ -1,0 +1,8 @@
+{
+  "label": "Overlays",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Components for creating modal, tooltip, and other overlay elements to enhance user interaction."
+  }
+}
