@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Icon Button
+# IconButton
 The `IconButton` component renders a button with only an icon. It's useful for icon-only interactions like toolbars, toggles, and quick actions. Fully accessible with required `aria-label` support and customizable via size, color, and disabled state.
 
 ## 📦 Import
