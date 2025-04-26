@@ -14,14 +14,15 @@ import { ActionButtonList } from "@sahilphondekar/react-component-library";
 
 ## 🧱 Props
 
-| Name               | Type                                                                 | Default     | Description                                                        |
-|--------------------|----------------------------------------------------------------------|-------------|--------------------------------------------------------------------|
-| `actions`          | `Array<{ icon: node, label: string, onClick: function }>`            | **Required**| List of actions with icon, label, and click handler                |
-| `menuIcon`         | `node`                                                               | **Required**| Icon element that triggers the menu                               |
-| `position`         | `"left"` \| `"right"` \| `"top"` \| `"bottom"`                       | `"left"`    | Position of the dropdown relative to the trigger button           |
-| `menuIconClassName`| `string`                                                             | `""`        | Custom classes for the menu icon button                           |
-| `menuClassName`    | `string`                                                             | `""`        | Custom classes for the dropdown container                         |
-| `actionClassName`  | `string`                                                             | `""`        | Custom classes for each individual action                         |
+| Name                 | Type                                                                 | Default     | Description                                             |
+|----------------------|----------------------------------------------------------------------|-------------|---------------------------------------------------------|
+| `actions`            | `Array<{ icon: node, label: string, onClick: function }>`            | **Required**| List of actions with icon, label, and click handler     |
+| `menuIcon`           | `node`                                                               | **Required**| Icon element that triggers the menu                     |
+| `position`           | `"left"` \| `"right"` \| `"top"` \| `"bottom"`                       | `"left"`    | Position of the dropdown relative to the trigger button |
+| `menuIconClassName`  | `string`                                                             | `""`        | Custom classes for the menu icon button                 |
+| `menuClassName`      | `string`                                                             | `""`        | Custom classes for the dropdown container               |
+| `containerClassName` | `string`                                                             | `""`        | Custom classes for the dropdown outer container         |
+| `actionClassName`    | `string`                                                             | `""`        | Custom classes for each individual action               |
 
 ## 📍 Positions
 
