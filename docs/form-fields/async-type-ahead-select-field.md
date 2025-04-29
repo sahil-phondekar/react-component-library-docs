@@ -39,22 +39,43 @@ import { AsyncTypeAheadSelectField } from "@sahilphondekar/react-component-libra
 ```jsx
 import { Controller } from "react-hook-form";
 
+const loadOptions = async (inputValue) => {
+    if (!inputValue) return [];
+
+    try {
+        const response = await fetch(
+            `https://jsonplaceholder.typicode.com/users`
+        );
+        const users = await response.json();
+
+        // Filter users by inputValue (simulate backend search)
+        const filtered = users.filter((user) =>
+            user.name.toLowerCase().includes(inputValue.toLowerCase())
+        );
+
+        // Map to react-select format
+        return filtered.map((user) => ({
+            label: user.name,
+            value: user.id,
+        }));
+    } catch (error) {
+        console.error("Error fetching users:", error);
+        return [];
+    }
+};
+
 <Controller
-  name="asyncStockItem"
+  name="users"
   control={control}
   render={({ field }) => (
     <AsyncTypeAheadSelectField
-      id="asyncStockItem"
-      label="Select Stock Item (Async)"
-      loadOptions={(inputValue) =>
-        fetch(`/api/stock-items?query=${inputValue}`)
-          .then((res) => res.json())
-          .then((data) =>
-            data.items.map((item) => ({ label: item.name, value: item.id }))
-          )
-      }
+      id="users"
+      label="Users (Async)"
+      loadOptions={loadOptions}
       {...field}
-      errorMessage={errors.asyncStockItem?.message}
+      value={undefined}
+      onChange={val => field.onChange(val?.value)}
+      errorMessage={errors.users?.message}
     />
   )}
 />

@@ -39,17 +39,24 @@ import { TypeAheadSelectField } from "@sahilphondekar/react-component-library";
 ```jsx
 import { Controller } from "react-hook-form";
 
+const country = [
+    {label: "India", value:"IN"},
+    {label: "USA", value:"USA"},
+];
+
 <Controller
-    defaultValue={stockOptions[0]}
-    name="stockItem1"
+    defaultValue="IN"
+    name="country"
     control={control}
     render={({ field }) => (
         <TypeAheadSelectField
-            id="stockItem1"
-            label="Select Stock Item 1"
-            options={stockOptions}
+            id="country"
+            label="Country"
+            options={country}
             {...field}
-            errorMessage={errors.stockItem1?.message}
+            value={country.find(c => c.value === field.value)}
+            onChange={val => field.onChange(val.value)}
+            errorMessage={errors.country?.message}
         />
     )}
 />
